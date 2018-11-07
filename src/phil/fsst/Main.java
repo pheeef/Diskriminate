@@ -35,24 +35,16 @@ public class Main {
             System.out.println(A);
             a = Float.parseFloat(A);
 
-            String X = Input.substring(2, 3);
-            System.out.println(X);
-            float x = Float.parseFloat(X);
-
             String B = Input.substring(6, 7);
             System.out.println(B);
             b = Float.parseFloat(B);
-
-            String Y = Input.substring(8, 9);
-            System.out.println(Y);
-            float y = Float.parseFloat(Y);
 
             String C = Input.substring(10, 11);
             System.out.println(C);
             c = Float.parseFloat(C);
 
 
-            JOptionPane.showMessageDialog(null, "Deine Eingabe lautet: " + A + "*" + X + "^2 + " + B + "*" + Y + " + " + C + " = 0");
+            JOptionPane.showMessageDialog(null, "Deine Eingabe lautet: " + A + "*x^2 + " + B + "*x + " + C + " = 0");
 
         }
 
