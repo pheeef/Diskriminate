@@ -10,6 +10,11 @@ public class Main {
 
         //a+x^2 + bx + c = 0
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bf8b66aaacaa504af05b98acefa4bce38b49fddc
         // Start
         float a=0;
         float b=0;
@@ -99,6 +104,12 @@ public class Main {
             }else if(xgp < 0){
                 //Keine Reele Lösung
             }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> bf8b66aaacaa504af05b98acefa4bce38b49fddc
 
         }
     }
