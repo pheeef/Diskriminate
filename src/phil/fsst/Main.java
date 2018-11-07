@@ -12,7 +12,7 @@ public class Main {
 
 
 
-        // Start1
+        // Start
         float a=0;
         float b=0;
         float c=0;
@@ -86,6 +86,21 @@ public class Main {
             System.out.println(xgp);
             System.out.println(xgn);
 
+            if(xkp > 0){
+                //2 Reelle Lösungen
+            }else if( xkp == 0){
+                //1 Lösung
+            }else if(xkp < 0){
+                //Keine Reele Lösung
+            }
+
+            if(xgp > 0){
+                //2 Reelle Lösungen
+            }else if( xgp == 0){
+                //1 Lösung
+            }else if(xgp < 0){
+                //Keine Reele Lösung
+            }
 
 
 
