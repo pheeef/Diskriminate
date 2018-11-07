@@ -10,9 +10,7 @@ public class Main {
 
         //a+x^2 + bx + c = 0
 
-
-
-        // Start1
+        // Start
         float a=0;
         float b=0;
         float c=0;
@@ -52,45 +50,57 @@ public class Main {
 
             String InputB = JOptionPane.showInputDialog("Gib deine Gleichung in diesem Format ein: (p/2)^2-q \n!WICHTIG! KEINE LEERZEICHEN BENÜTZEN");
 
-            String P = InputB.substring(1,2);
+            String P = InputB.substring(1, 2);
             System.out.println(P);
             p = Float.parseFloat(P);
 
-            String Q = InputB.substring(8,9);
+            String Q = InputB.substring(8, 9);
             System.out.println(Q);
             q = Float.parseFloat(Q);
 
-            JOptionPane.showMessageDialog(null, "Deine Eingabe lautet: D = (" + P +"/2)^2-" + Q);
+            JOptionPane.showMessageDialog(null, "Deine Eingabe lautet: D = (" + P + "/2)^2-" + Q);
 
             //Kleine Diskriminante
             //Kleine Diskriminante positiv
-            quadratkp = (((p/2) * (p/2))-q);
-            xkp = -(p/2) + Math.sqrt(quadratkp);
+            quadratkp = (((p / 2) * (p / 2)) - q);
+            xkp = -(p / 2) + Math.sqrt(quadratkp);
 
             //Kleine Diskriminante negativ
-            quadratkn = (((p/2) * (p/2))-q);
-            xkn = -(p/2) - Math.sqrt(quadratkn);
+            quadratkn = (((p / 2) * (p / 2)) - q);
+            xkn = -(p / 2) - Math.sqrt(quadratkn);
 
             System.out.println(xkp);
             System.out.println(xkn);
 
             //große Diskriminante
             //große Diskriminante positiv
-            quadratgp = b*b;
-            xgp = (-b + Math.sqrt(quadratgp-(4*a*c))) / (2*a);
+            quadratgp = b * b;
+            xgp = (-b + Math.sqrt(quadratgp - (4 * a * c))) / (2 * a);
 
             //große Diskriminante negativ
-            quadratgn = b*b;
-            xgn = (-b - Math.sqrt(quadratgn -(4*a*c)) )/ (2*a);
+            quadratgn = b * b;
+            xgn = (-b - Math.sqrt(quadratgn - (4 * a * c))) / (2 * a);
 
             System.out.println(xgp);
             System.out.println(xgn);
 
+            if(xkp > 0){
+                //2 Reelle Lösungen
+            }else if( xkp == 0){
+                //1 Lösung
+            }else if(xkp < 0){
+                //Keine Reele Lösung
+            }
 
-
-
+            if(xgp > 0){
+                //2 Reelle Lösungen
+            }else if( xgp == 0){
+                //1 Lösung
+            }else if(xgp < 0){
+                //Keine Reele Lösung
+            }
 
         }
-
     }
+
 }
