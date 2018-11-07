@@ -13,40 +13,18 @@ public class Main {
 
 
         // Start
-        float a=1,b=5,c=6,p = 5,q= 6;
+        float a=0;
+        float b=0;
+        float c=0;
+        float p=0;
+        float q=0;
         double xkp, xkn, quadratkp, quadratkn; //xk kleine Diskriminante ergebnis; quadratzahl;  p = positiv; n = negativ
         double xgp, xgn, quadratgp, quadratgn; //xg große Diskriminante ergebnis; quadratzahl;  p = positiv; n = negativ
-
-        //Kleine Diskriminante
-        //Kleine Diskriminante positiv
-        quadratkp = (((p/2) * (p/2))-q);
-        xkp = -(p/2) + Math.sqrt(quadratkp);
-
-        //Kleine Diskriminante negativ
-        quadratkn = (((p/2) * (p/2))-q);
-        xkn = -(p/2) - Math.sqrt(quadratkn);
-
-        System.out.println(xkp);
-        System.out.println(xkn);
-
-        //große Diskriminante
-        //große Diskriminante positiv
-        quadratgp = b*b;
-        xgp = (-b + Math.sqrt(quadratgp-(4*a*c))) / (2*a);
-
-        //große Diskriminante negativ
-        quadratgn = b*b;
-        xgn = (-b - Math.sqrt(quadratgn -(4*a*c)) )/ (2*a);
-
-        System.out.println(xgp);
-        System.out.println(xgn);
-
-
 
 
         //Input
 
-        String Decide = JOptionPane.showInputDialog("Wähle ob du die \n[große Diskriminaten [1] \noder \nkleine Diskrimante[2]");
+        String Decide = JOptionPane.showInputDialog("Wähle ob du die \ngroße Diskriminaten [1] \noder \nkleine Diskrimante[2]");
         int decide = Integer.parseInt(Decide);
 
         if (decide == 1) {
@@ -91,6 +69,32 @@ public class Main {
             q = Float.parseFloat(Q);
 
             JOptionPane.showMessageDialog(null, "Deine Eingabe lautet: D = (" + P +"/2)^2-" + Q);
+
+            //Kleine Diskriminante
+            //Kleine Diskriminante positiv
+            quadratkp = (((p/2) * (p/2))-q);
+            xkp = -(p/2) + Math.sqrt(quadratkp);
+
+            //Kleine Diskriminante negativ
+            quadratkn = (((p/2) * (p/2))-q);
+            xkn = -(p/2) - Math.sqrt(quadratkn);
+
+            System.out.println(xkp);
+            System.out.println(xkn);
+
+            //große Diskriminante
+            //große Diskriminante positiv
+            quadratgp = b*b;
+            xgp = (-b + Math.sqrt(quadratgp-(4*a*c))) / (2*a);
+
+            //große Diskriminante negativ
+            quadratgn = b*b;
+            xgn = (-b - Math.sqrt(quadratgn -(4*a*c)) )/ (2*a);
+
+            System.out.println(xgp);
+            System.out.println(xgn);
+
+
 
 
 
