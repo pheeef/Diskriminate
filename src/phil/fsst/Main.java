@@ -58,8 +58,7 @@ public class Main {
             if(xgp > 0){
                 //2 Reelle Lösungen
 
-                JOptionPane.showMessageDialog(null, "D+ = " +  xgp);
-                JOptionPane.showMessageDialog(null, "D- = " +  xgn);
+                JOptionPane.showMessageDialog(null, "D+ = " +  xgp + "\nD- = " +  xgn);
 
             }else if( xgp == 0){
                 //1 Lösung
@@ -94,22 +93,110 @@ public class Main {
             quadratkn = (((p / 2) * (p / 2)) - q);
             xkn = -(p / 2) - Math.sqrt(quadratkn);
 
+
+            System.out.println(quadratkp);
+            System.out.println(quadratkn);
+
             if(quadratkp > 0){
                 //2 Reelle Lösungen
-                JOptionPane.showMessageDialog(null, "D- = " +  xkp);
-                JOptionPane.showMessageDialog(null, "D+ = " +  xkn);
+                JOptionPane.showMessageDialog(null, "D- = " +  xkp +  "\nD+ = " +  xkn);
             }
-            else if( quadratkn == 0){
+            else if( quadratkp == 0){
                 //1 Lösung
                 JOptionPane.showMessageDialog(null, "D = " +  xkp);
             }
-            else if(quadratkn < 0){
+            else if(quadratkp < 0){
                 //Keine Reele Lösung
                 JOptionPane.showMessageDialog(null, "Die von dir eingebe Gleichung hat keine Lösung");
 
             }
 
         }
+
+        if (decide == 3) {
+
+            String A = JOptionPane.showInputDialog("Gib a ein");
+            System.out.println(A);
+            a = Float.parseFloat(A);
+
+            String B = JOptionPane.showInputDialog("Gib b ein");
+            System.out.println(B);
+            b = Float.parseFloat(B);
+
+            String C = JOptionPane.showInputDialog("Gib c ein");
+            System.out.println(C);
+            c = Float.parseFloat(C);
+
+            //große Diskriminante
+            //große Diskriminante positiv
+            quadratgp = b * b;
+            xgp = (-b + Math.sqrt(quadratgp - (4 * a * c))) / (2 * a);
+
+            //große Diskriminante negativ
+            quadratgn = b * b;
+            xgn = (-b - Math.sqrt(quadratgn - (4 * a * c))) / (2 * a);
+
+            System.out.println(xgp);
+            System.out.println(xgn);
+
+            if(xgp > 0){
+                //2 Reelle Lösungen
+
+                JOptionPane.showMessageDialog(null, "D+ = " +  xgp + "\nD- = " +  xgn);
+
+            }else if( xgp == 0){
+                //1 Lösung
+                JOptionPane.showMessageDialog(null, "D = " +  xgp);
+            }else if(xgp < 0){
+                //Keine Reele Lösung
+                JOptionPane.showMessageDialog(null, "Die von dir eingebe Gleichung hat keine Lösung");
+            }
+
+        }
+
+
+        }
+
+        if (decide == 4) {
+
+            String P = JOptionPane.showInputDialog("Gib P ein");
+            System.out.println(P);
+            p = Float.parseFloat(P);
+
+            String Q = JOptionPane.showInputDialog("Gib Q ein");
+            System.out.println(Q);
+            q = Float.parseFloat(Q);
+
+            //Kleine Diskriminante
+            //Kleine Diskriminante positiv
+            quadratkp = (((p / 2) * (p / 2)) - q);
+            xkp = -(p / 2) + Math.sqrt(quadratkp);
+
+            //Kleine Diskriminante negativ
+            quadratkn = (((p / 2) * (p / 2)) - q);
+            xkn = -(p / 2) - Math.sqrt(quadratkn);
+
+
+            System.out.println(quadratkp);
+            System.out.println(quadratkn);
+
+            if(quadratkp > 0){
+                //2 Reelle Lösungen
+                JOptionPane.showMessageDialog(null, "D- = " +  xkp +  "\nD+ = " +  xkn);
+            }
+            else if( quadratkp == 0){
+                //1 Lösung
+                JOptionPane.showMessageDialog(null, "D = " +  xkp);
+            }
+            else if(quadratkp < 0){
+                //Keine Reele Lösung
+                JOptionPane.showMessageDialog(null, "Die von dir eingebe Gleichung hat keine Lösung");
+
+            }
+
+
+
+        }
     }
 
-}
+};
